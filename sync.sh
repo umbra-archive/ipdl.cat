@@ -1,15 +1,22 @@
 FROM="../torrent_swarm_monitoring_daemon/out/"
+TO="./data/"
 FILES="stats.html torrents.json torrents.html"
 DATE=$(date +%s)
 COMMIT_MSG="update-${DATE}"
 
+echo "Sync start"| logger
+
+set -ex 
 for file in ${FILES}; do
-	echo cp ${FROM}${file} .
+	cp ${FROM}${file} ${TO}
 done
 
 
-echo git add ${FILES}
-echo git commit -m "${COMMIT_MSG}"
-echo git push
+cd ${TO} && git add ${FILES}
+git commit -m "${COMMIT_MSG}"
+git push
 
-## TBD: add some git purge
+# TBD: add some git purge
+
+echo "Sync done"| logger
+
