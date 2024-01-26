@@ -13,6 +13,7 @@ done
 
 
 cd ${TO} && git add ${FILES}
+git pull
 git commit -m "${COMMIT_MSG}"
 git push
 
