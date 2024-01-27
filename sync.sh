@@ -12,8 +12,8 @@ for file in ${FILES}; do
 done
 
 
+#git pull
 cd ${TO} && git add ${FILES}
-git pull
 git commit -m "${COMMIT_MSG}"
 git push
 
