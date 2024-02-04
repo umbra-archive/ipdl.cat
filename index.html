@@ -1,39 +1,239 @@
-<html>
-<title> ipdl.cat: Interplanetary Distributed Literature Catalogue</title>
-<style>
-    body {
-        font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
-	color: black;
-    }
-    table tr:hover {
-        background-color: #ccc;
-    }
-    table td {
-        padding: .25em 1em;
-        border-bottom: 1px solid #333;
-    }
-    table td:nth-child(1) {
-        font-family: 'Courier New', 'Courier', monospace;
-    }
-    .title {
-        font-size: 1.5rem;
-    }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2x4 Grid of Divs</title>
+    <style>
+      html {
+        //height: 100%;
+      }
+      body {
+        margin-left: 15px;
+        background: linear-gradient(to bottom, black, #211775);
+        /*background: linear-gradient(to bottom, black, #0a0a2a); */
+        color: white;
+        font-family: monospace;
+        background-repeat: no-repeat;
+      }
+      h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      a {
+        color: rgb(169, 167, 167);
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+      }
+      .grid-item {
+        width: 470px;
+        height: 260px;
+        //background-color: #3020f0;
+        //border: 2px solid #000;
+        display: flex;
+      }
+      .box-l {
+        justify-content: left;
+        align-items: top;
+      }
+      .box-r {
+        justify-content: center;
+        align-items: center;
+      }
 
-    a { color: gray}
+      dd {
+        display: list-item;
+        list-style-type: disc;
+  margin-bottom: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Interplanetary Distributed Literature Catalog</h1>
+    <div class="grid-container">
+      <div class="grid-item box-l">
+        <dl>
+          <dt><h2>Literature Data Collections<h2></dt>
+					<dd><strong>DATA:</strong> all collections, human readable  <a href="/data/torrents.html"> html </a></dd>
+					<dd><strong>DATA:</strong> all collections, machine readable <a href="/data/forrents.json"> json </a></dd>
+          <dd>collection monitoring stats <a href="/data/stats.html"> here </a></dd>
+          <dd>
+            <dl>
+              <dt>Currently monitored collections:</dt>
+                <dd>Library Genesis
 
-    .body {
-            background-color: #BEBEBE;
-            background-colorX: #DCDCDC;
-            color: white;
-        }
+                  <a
+                  href="https://www.libgen.is/">(web</a>|<a
+                  href="https://en.wikipedia.org/wiki/Library_Genesis">wiki</a>|<a
+                  href="https://libgen.vg/torrents/libgen/">data src)</a>
 
-</style>
-<div class=body>
-<p class="title"><b>ipdl.cat:</b> <b>i</b>nterplanetary <b>d</b>istributed <b>l</b>iterature <b>cat</b>alogue</p>
-<section class="content">
-<div><a href="./data/torrents.html"> human readable (html) </a></div>
-<div><a href="./data/torrents.html"> machine readable (json)</a></div>
-<div><a href="./data/stats.html"> statistics</a></div>
-</section>
-</div>
+                </dd>
+                <dd> Sci-Hub/scimag&nbsp;
+                  <a
+                  href="https://sci-hub.se/">(web</a>|<a
+                  href="https://en.wikipedia.org/wiki/Sci-Hub">wiki</a>|<a
+                  href="https://libgen.is/scimag/repository_torrent/">data src)</a>
+
+                </dd>
+
+                
+                <dd>Anna's-Archive&nbsp;
+                  <a
+                  href="https://annas-archive.org/">(web</a>|<a
+                  href="https://en.wikipedia.org/wiki/Anna%27s_Archive">wiki</a>|<a
+                  href="https://annas-archive.org/torrents">data src)</a>
+                </dd>
+								<dd><s>Library of Alexandria&nbsp</s>
+								<a href="https://en.wikipedia.org/wiki/Library_of_Alexandria">(permanently lost due to 🔥)</a>
+                </dd>
+
+              </dd>
+        </dl>
+
+      </div>
+      <div class="grid-item box-r">
+        <div class="ascii-art">
+          <pre>
+      __...--~~~~~-._   _.-~~~~~--...__
+    //               `V'               \\
+   //                 |                 \\
+  //__...--~~~~~~-._  |  _.-~~~~~~--...__\\
+ //__.....----~~~~._\ | /_.~~~~----.....__\\
+====================\\|//====================
+                dwb `---`
+
+            </pre
+          >
+        </div>
+      </div>
+      <div class="grid-item box-l">
+        <dl>
+          <dt><h2>About IPDB.cat<h2></dt>
+					<dd>IPDB is dedicated to all great libraries of history.</dd>
+					<dd>It continuously monitors the health of their backbones</dd>
+					<dd>The backbones or backends of these shadow libraries is run by a random loose knit group of volunteers, literature and freedom enthusiasts</dd>
+					<dd>Most shadow libraries make use of Torrent and IPFS for storage, backup and distribution</dd>
+					<dd>Monitoring the health of torrent collections is done by means of DHT and querying tracker</dd>
+          <dd>This system is powered by TSMD</dd>
+          <dd>Torrent Swarm Monitoring Daemon is developed <a href="https://github.com/umbra-archive/torrent_swarm_monitoring_daemon">here</a> </a> </dd>
+          <dd>Contact: email@tbd.com </dd>
+        </dl>
+      </div>
+      <div class="grid-item box-r">
+        <div class="ascii-art">
+          <pre>
+          .--.                   .---.
+      .---|__|           .-.     |~~~|
+   .--|===|--|_          |_|     |~~~|--.
+   |  |===|  |'\     .---!~|  .--|   |--|
+   |%%|   |  |.'\    |===| |--|%%|   |  |
+   |%%|   |  |\.'\   |   | |__|  |   |  |
+   |  |   |  | \  \  |===| |==|  |   |  |
+   |  |   |__|  \.'\ |   |_|__|  |~~~|__|
+   |  |===|--|   \.'\|===|~|--|%%|~~~|--|
+   ^--^---'--^    `-'`---^-^--^--^---'--' hjw
+
+            </pre
+          >
+        </div>
+      </div>
+<!--
+      <div class="grid-item box-l">
+        <dl>
+          <dt><h2>FooBar<h2></dt>
+          <dd>foofoofoo</dd>
+          <dd>barbarbar</dd>
+        </dl>
+        </div>
+      <div class="grid-item box-r">
+        <div class="ascii-art">
+          <pre>
+          _.-"\
+      _.-"     \
+   ,-"          \
+  ( \            \
+   \ \            \
+    \ \            \
+     \ \         _.-;
+      \ \    _.-"   :
+       \ \,-"    _.-"
+        \(   _.-"  -shimrod
+         `--"
+ 
+            </pre
+          >
+        </div>
+      </div>
+-->
+        <div class="grid-item box-l">
+					<dl><h2>&nbsp</h2>
+          <dt><h2>Join the Interplanetary Network<h2></dt>
+					<dd>Got some computer, storage and bandwidth? Adopt a few Torrents and seed forever!</dd>
+					<dd>Got skills? Contribute code!</dd>
+					<dd> Want to join the movement? Find the others??
+						<dl>
+							<dd>
+						<a href="https://forum.mhut.org/viewtopic.php?f=6&t=13751start=25">mhut</a>
+							</dd>
+							<dd>
+						<a href="https://www.reddit.com/r/Annas_Archive/">anna's subreddit</a>
+							</dd>
+							<dd>
+						<a href="https://freeread.org/">freeread.org</a>
+							</dd>
+							<dd>
+								<a hred="https://www.reddit.com/r/scihub/">sci-hubs' subreddit</a>
+							</dd>
+						</dl>
+					</dd>
+					<dd>Start small? Host more copies of this service.</dd>
+        </dl>
+        </div>
+      <div class="grid-item box-r">
+        <div class="ascii-art">
+          <pre>
+                                  .'':
+                            .-""""-.'         .---.          .----.        .-"""-.
+            _    _        ."     .' ".    ..."     "...    ."      ".    ."       ".
+        o  (_)  (_)  ()   :    .'    :   '..:.......:..'   :        :    :         :   o
+                          :  .'      :       '.....'       '.      .'    '.       .'
+                        .'.'.      .'                        `''''`        `'''''`
+                        ''   ``````                             (Dana'97, edited)
+            </pre
+          >
+        </div>
+      </div>
+      <div class="grid-item box-l">
+        <dl>
+					<h2>&nbsp</h2>
+          <dt><h2>See also<h2></dt>
+					<dd><a href="https://freeread.org/torrents.html">How to seed</a> </dd>
+          <dd>Libgen-seedtools: manage large scale seeding operations: <a href="https://pypi.org/project/libgen-seedtools/">(github)</a> <a href="https://pypi.org/project/libgen-seedtools/">(pypy)</a> </dd>
+          <dd>A page tracking related data sets: <a href="https://phillm.net/libgen-stats-table.php">phillm.net</a>  </dd>
+          <dd><strong>Awesome-Libgen:</strong> Info collection related to the general shadow library eco-system<a href="https://github.com/freereadorg/awesome-libgen">(github)</a>  </dd>
+          <dd>ASCII art credits: see individual tags</dd>
+        </dl>
+      </div>
+      <div class="grid-item box-r">
+        <div class="ascii-art">
+          <pre>
+              _.--._  _.--._
+        ,-=.-":;:;:;\':;:;:;"-._
+        \\\:;:;:;:;:;\:;:;:;:;:;\
+         \\\:;:;:;:;:;\:;:;:;:;:;\
+          \\\:;:;:;:;:;\:;:;:;:;:;\
+           \\\:;:;:;:;:;\:;::;:;:;:\
+            \\\;:;::;:;:;\:;:;:;::;:\
+             \\\;;:;:_:--:\:_:--:_;:;\  -shimrod
+              \\\_.-"      :      "-._\
+               \`_..--""--.;.--""--.._=>
+                "
+         </pre>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
