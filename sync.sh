@@ -3,6 +3,7 @@ TO="./data/"
 FILES="stats.html torrents.json torrents.html"
 DATE=$(date +%s)
 COMMIT_MSG="update-${DATE}"
+export FILTER_BRANCH_SQUELCH_WARNING=1
 
 echo "Sync start"| logger
 
