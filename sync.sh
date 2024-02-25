@@ -7,17 +7,21 @@ COMMIT_MSG="update-${DATE}"
 echo "Sync start"| logger
 
 set -ex 
+
+for file in ${FILES}; do
+	FILE_PATH=${TO}${file}
+	echo git filter-branch --force --index-filter "git rm --cached --ignore-unmatch ${FILE_PATH}" --prune-empty --tag-name-filter cat -- --all
+done
+
+exit
+
 for file in ${FILES}; do
 	cp ${FROM}${file} ${TO}
 done
 
-
-#git pull
 cd ${TO} && git add ${FILES}
 git commit -m "${COMMIT_MSG}"
-git push
-
-# TBD: add some git purge
+#git push
+git push origin --force --all
 
 echo "Sync done"| logger
-
