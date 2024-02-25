@@ -10,10 +10,10 @@ set -ex
 
 for file in ${FILES}; do
 	FILE_PATH=${TO}${file}
-	echo git filter-branch --force --index-filter "git rm --cached --ignore-unmatch ${FILE_PATH}" --prune-empty --tag-name-filter cat -- --all
+	git filter-branch --force --index-filter "git rm --cached --ignore-unmatch ${FILE_PATH}" --prune-empty --tag-name-filter cat -- --all
 done
 
-exit
+#exit
 
 for file in ${FILES}; do
 	cp ${FROM}${file} ${TO}
