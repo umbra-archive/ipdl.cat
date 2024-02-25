@@ -13,8 +13,6 @@ for file in ${FILES}; do
 	git filter-branch --force --index-filter "git rm --cached --ignore-unmatch ${FILE_PATH}" --prune-empty --tag-name-filter cat -- --all
 done
 
-#exit
-
 for file in ${FILES}; do
 	cp ${FROM}${file} ${TO}
 done
